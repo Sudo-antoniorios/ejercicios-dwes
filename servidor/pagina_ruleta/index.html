@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+</head>
+<body>
+<button onclick="sortear()">Iniciar</button>
+<p id="res"></p>
+
+<script>
+let nombres = ["Ali", "Alfonso", "Ángel", "Adrián", "Fernando","Antonio", "German","Roberto","Miguel angel","Ali", "Alfonso", "Ángel", "Adrián", "Fernando","Roberto","Miguel Ángel"];
+
+function sortear(){
+  let i=0, res=document.getElementById("res");
+  let t=setInterval(()=>{
+    res.innerText=nombres[Math.floor(Math.random()*nombres.length)];
+    if(i++>20) clearInterval(t);
+  },100);
+}
+</script>
+</body>
+</html>
